@@ -1,12 +1,10 @@
 package co.simplon.boucheaoreille.model;
 
-import java.time.LocalDate;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.Pattern;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -23,7 +21,7 @@ public class AdviceSheet {
 	@NotBlank
 	private String doctorAddress;
 
-	@Pattern(regexp = "^\\+?\\d+$")
+	@NotBlank
 	private String doctorPhoneNumber;
 
 	@NotBlank
@@ -36,9 +34,11 @@ public class AdviceSheet {
 	private boolean isModernEquipment;
 	private boolean isDifficultToMakeAppointment;
 
-	private LocalDate creationDate;
-
-	// private User idCreatorUser;
+	// @DateTimeFormat(iso=DateTimeFormat.ISO.DATE) 
+	// private LocalDate creationDate;
+	
+    @ManyToOne
+	private User creator; 
 
 	public Long getIdAdviceSheet() {
 		return idAdviceSheet;
@@ -128,19 +128,20 @@ public class AdviceSheet {
 		this.isDifficultToMakeAppointment = isDifficultToMakeAppointment;
 	}
 
-	public LocalDate getCreationDate() {
+	public User getCreator() {
+		return creator;
+	}
+
+	public void setCreator(User creator) {
+		this.creator = creator;
+	}
+
+    /* public LocalDate getCreationDate() {
 		return creationDate;
 	}
 
 	public void setCreationDate(LocalDate creationDate) {
 		this.creationDate = creationDate;
 	}
-
-	/*
-	 * public User getIdCreatorUser() { return idCreatorUser; }
-	 * 
-	 * public void setIdCreatorUser(User idCreatorUser) { this.idCreatorUser =
-	 * idCreatorUser; }
-	 */
-
+    */
 }
