@@ -10,17 +10,17 @@ L'API "Bouche à oreille" propose de partager ses bonnes adresses santé sur Par
 
 ## **Technologies et ressources utilisées pour mener à bien ce projet:**
 
-**IDE Eclipse** pour son environnement de développement principalement destiné au langage Java.
+**IDE Eclipse** pour son environnement de développement principalement dédié au langage Java.
 
 **Java 8** car c'est un langage de programmation orientée objet très utilisé en production et très demandé en entreprise.
 
-**Spring (Spring Boot)** pour son framework qui aide à configurer son projet grace aux injections de dépendances Maven. 
+**Spring (Spring Boot)** pour son framework qui permet d'auto-configurer les dépendances nécessaires au bon démarrage d'un projet.
 
-**MySQL Workbench** pour concevoir une base de données relationnelle grace aux jointures.
+**MySQL Workbench** pour concevoir une base de données relationnelle grâce aux jointures.
 
-**angular-bootstrap-md** pour créer une partie front-end totalement responsive qui respecte les normes Material Design
+**angular-bootstrap-md** pour créer une partie front-end totalement responsive qui respecte les normes Material Design.
 
-**Postman** pour tester mon API de façon simple et rapide sans avoir à créer une base de donnée au préalabe. 
+**Postman** pour tester mon API de façon simple et rapide sans avoir à créer une base de donnée au préalable. 
 
 **[StarUML](https://github.com/constanceBN/API-Bouche-a-oreille/tree/master/diagrams)** pour faire ses diagrammes UML (Use Case, diagramme de classe et diagramme Entité Relation).
 
